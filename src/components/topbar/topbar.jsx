@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./topbar.css";
 
 export default function TopBar() {
-  const user = false;
+  const user = true;
   return (
     <div className="top">
       <div className="topLeft">
@@ -37,11 +37,13 @@ export default function TopBar() {
       </div>
       <div className="topRight">
         {user ? (
-          <img
-            className="topImg"
-            src="https://i.ytimg.com/vi/6di34z0eAaI/maxresdefault.jpg"
-            alt=""
-          />
+          <Link to="/settings">
+            <img
+              className="topImg"
+              src="https://i.ytimg.com/vi/6di34z0eAaI/maxresdefault.jpg"
+              alt=""
+            />
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
